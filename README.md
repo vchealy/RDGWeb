@@ -1,4 +1,4 @@
-Setup your virtual environment
+Setup your virtual environment  
 Install the requirements
 
 There are three main python files to this script.
