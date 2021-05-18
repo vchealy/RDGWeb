@@ -3,18 +3,18 @@ Install the requirements
 
 There are three main python files to this script.
 
-main.py
-choice_functions.py
-request_functions.py
+main.py  
+choice_functions.py  
+request_functions.py  
 
-main.py
+main.py  
 Is the initisation file. Run this to start the code
 
-choice_functions.py
+choice_functions.py  
 This module contains all of the working code.
 Deciding which request to action and gathering up the custom requirements for the function.
 
-request_function.py
+request_function.py  
 This file holds the bulk of the requests, header, custom parameters
 Defaults have been put in place from the initial function testing. This may have to be altered
 for the calling of the function as I found the surname default would not action when
