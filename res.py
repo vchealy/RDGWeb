@@ -10,9 +10,9 @@ Initially it was set to print:
 Write the inputer(XML object) to a JSON file rather than console.
 Create the JSON file with a Unique Identifier
 '''
-import xmltodict
 import json
-from datetime import datetime, time
+import xmltodict
+from datetime import datetime
 
 # Create an Unique  File Name
 object_name = "Extraction-" + datetime.today().strftime('%Y-%m-%d') + '_' + \
