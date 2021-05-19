@@ -1,3 +1,15 @@
+# choce_functions.py
+'''
+Directed from main.py
+Each function is a sub selection from the initial coices in main_function
+
+On completeion of the choice information is sent to the request_functions module
+request_functions constructs and actions the GEt request
+The request_functions returns the status and body text from the server reply
+The choice module then forwards the information onto res.py
+res.py will manipulate the information into a desired format
+'''
+
 from os import system
 from request_functions import *
 from res import result_manager

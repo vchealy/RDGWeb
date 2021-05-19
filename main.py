@@ -1,12 +1,22 @@
 # main.py
+'''
+This is to consume API from a specific server.
+The log in and url are contained in a separate module auth.py
 
+main_function gives a selection of options, each is a group of options depending on the information
+held by the user.
+The user is then directed to another module choice_functions.py to handle the sub-menu selection
+There are no other requirements of this module.
+
+More Error management could be included but for it's current use it is expected to suffice
+'''
 
 from os import system
 from choice_functions import *
 
 
 def main_function():
-    system('cls') # Clear Console
+    system('cls')  # Clear Console
     print('''
     Press:
     1: If you have the ISRN
@@ -21,23 +31,22 @@ def main_function():
 
     if answer == '1':
         choice01()
-    elif answer =='2':
+    elif answer == '2':
         choice02()
-    elif answer =='3':
+    elif answer == '3':
         choice03()
-    elif answer =='4':
+    elif answer == '4':
         choice04()
-    elif answer =='5':
+    elif answer == '5':
         choice05()
-    elif answer =='6':
+    elif answer == '6':
         choice06()
-    elif answer =='7':
-        system('cls') 
+    elif answer == '7':
+        system('cls')
         exit
     else:
         print('Blah')
         main_function()
-
 
 
 main_function()
