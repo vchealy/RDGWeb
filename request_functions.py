@@ -20,8 +20,7 @@ def card_details_ISRN(queried="633597024930003352"):
     else:
         print("Response Failed")
 
-    print(x.status_code)
-    print(x.text)
+    return x.status_code, x.text
 
 
 def journey_taps_ISRN(queried="633597024930003014"):
@@ -38,8 +37,7 @@ def journey_taps_ISRN(queried="633597024930003014"):
     else:
         print("Response Failed")
 
-    print(x.status_code)
-    print(x.text)
+    return x.status_code, x.text
 
 
 def journey_by_ticket_ID(queried="66698"):
@@ -56,8 +54,7 @@ def journey_by_ticket_ID(queried="66698"):
     else:
         print("Response Failed")
 
-    print(x.status_code)
-    print(x.text)
+    return x.status_code, x.text
 
 
 def product_long_by_ticket_ID(queried="66697"):
@@ -73,8 +70,7 @@ def product_long_by_ticket_ID(queried="66697"):
     else:
         print("Response Failed")
 
-    print(x.status_code)
-    print(x.text)
+    return x.status_code, x.text
 
 
 def products_summary_list_ISAM_instance_ID(
@@ -97,8 +93,7 @@ def products_summary_list_ISAM_instance_ID(
     else:
         print("Response Failed")
 
-    print(x.status_code)
-    print(x.text)
+    return x.status_code, x.text
 
 
 def product_summary_list_by_fulfilment_request_reference(
@@ -117,8 +112,7 @@ def product_summary_list_by_fulfilment_request_reference(
     else:
         print("Response Failed")
 
-    print(x.status_code)
-    print(x.text)
+    return x.status_code, x.text
 
 
 def product_summary_list_by_ISRN(isrn="633597024930003733"):
@@ -135,8 +129,7 @@ def product_summary_list_by_ISRN(isrn="633597024930003733"):
     else:
         print("Response Failed")
 
-    print(x.status_code)
-    print(x.text)
+    return x.status_code, x.text
 
 
 def ipedefinition_by_ISAM_instance_ID(ipeIsamId="7B06DC7", ipeIsamSeqNum="000072"):
@@ -157,8 +150,7 @@ def ipedefinition_by_ISAM_instance_ID(ipeIsamId="7B06DC7", ipeIsamSeqNum="000072
     else:
         print("Response Failed")
 
-    print(x.status_code)
-    print(x.text)
+    return x.status_code, x.text
 
 
 def ipedefinition_by_fulfilment_request_reference(queried="WLP012GW95BKR320208"):
@@ -175,8 +167,7 @@ def ipedefinition_by_fulfilment_request_reference(queried="WLP012GW95BKR320208")
     else:
         print("Response Failed")
 
-    print(x.status_code)
-    print(x.text)
+    return x.status_code, x.text
 
 
 def cardholder_by_name(lastname="Gray"):
@@ -195,8 +186,7 @@ def cardholder_by_name(lastname="Gray"):
     else:
         print("Response Failed")
 
-    print(x.status_code)
-    print(x.text)
+    return x.status_code, x.text
 
 
 def card_details_by_card_reference(queried="WLU009GB27499901919"):
@@ -213,5 +203,4 @@ def card_details_by_card_reference(queried="WLU009GB27499901919"):
     else:
         print("Response Failed")
 
-    print(x.status_code)
-    print(x.text)
+    return x.status_code, x.text

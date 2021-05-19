@@ -1,5 +1,6 @@
 from os import system
 from request_functions import *
+from res import result_manager
 
 
 def choice01():
@@ -21,35 +22,37 @@ def choice01():
         print('Press Enter for Default')
         card = input('\nWhat is the ISRN? ')
         if card == '':
-            card_details_ISRN()
+            res = card_details_ISRN()
         elif card == '7':
             exit
         else:
-            card_details_ISRN(card)
+            res = card_details_ISRN(card)
     elif answer == '2':
         system("cls")  # Clear Console
         print("ISRN Choices - Enter 7 to Exit")
         print('Press Enter for Default')
         card = input('\nWhat is the ISRN? ')
         if card == '':
-            journey_taps_ISRN()
+            res = journey_taps_ISRN()
         elif card == '7':
             exit
         else:
-            journey_taps_ISRN(card)
+            res = journey_taps_ISRN(card)
     elif answer == '3':
         system("cls")  # Clear Console
         print("ISRN Choices - Enter 7 to Exit")
         print('Press Enter for Default')
         card = input('\nWhat is the ISRN?')
         if card == '':
-            product_summary_list_by_ISRN()
+            res = product_summary_list_by_ISRN()
         elif card == '7':
             exit
         else:
-            product_summary_list_by_ISRN(card)
+            res = product_summary_list_by_ISRN(card)
     elif answer == '7' or '':
         exit
+
+    result_manager(res[0], res[1])
 
 
 def choice02():
@@ -71,7 +74,7 @@ def choice02():
         card = input('What is the Ticket Number? ')
         journey_by_ticket_ID(card)
         if card == '':
-            journey_by_ticket_ID()
+            res = journey_by_ticket_ID()
         elif card == '7':
             exit
         else:
@@ -82,13 +85,15 @@ def choice02():
         print('Press Enter for Default')
         card = input('What is the Ticket Number? ')
         if card == '':
-            product_long_by_ticket_ID()
+            res = product_long_by_ticket_ID()
         elif card == '7':
             exit
         else:
-            product_long_by_ticket_ID(card)
+            res = product_long_by_ticket_ID(card)
     elif answer == '7' or '':
         exit
+
+    result_manager(res[0], res[1])
 
 
 def choice03():
@@ -110,14 +115,16 @@ def choice03():
         ipeIsamId = input('\nWhat is the IPE ISAM ID? ')
         ipeIsamSeqNum = input('What is the Sequence Number? ')
         if ipeIsamId == '' and ipeIsamSeqNum == '':
-            products_summary_list_ISAM_instance_ID()
+            res = products_summary_list_ISAM_instance_ID()
         elif ipeIsamId == '':
             ipeIsamId = "7B06DC7"
-            products_summary_list_ISAM_instance_ID(ipeIsamId, ipeIsamSeqNum)
+            res = products_summary_list_ISAM_instance_ID(
+                ipeIsamId, ipeIsamSeqNum)
         elif ipeIsamSeqNum == '':
-            products_summary_list_ISAM_instance_ID(ipeIsamId)
+            res = products_summary_list_ISAM_instance_ID(ipeIsamId)
         else:
-            products_summary_list_ISAM_instance_ID(ipeIsamId, ipeIsamSeqNum)
+            res = products_summary_list_ISAM_instance_ID(
+                ipeIsamId, ipeIsamSeqNum)
     elif answer == '2':
         system("cls")  # Clear Console
         print("IPE ISAM ID and ISAM Sequence Numbers")
@@ -135,6 +142,8 @@ def choice03():
             ipedefinition_by_ISAM_instance_ID(ipeIsamId, ipeIsamSeqNum)
     elif answer == '7' or '':
         exit
+
+    result_manager(res[0], res[1])
 
 
 def choice04():
@@ -166,14 +175,16 @@ def choice04():
         print('Press Enter for Default')
         card = input('\nWhat is the Fulfilment Request Reference? ')
         if card == '':
-            ipedefinition_by_fulfilment_request_reference()
+            res = ipedefinition_by_fulfilment_request_reference()
         elif card == '7':
             exit
         else:
-            ipedefinition_by_fulfilment_request_reference(
-                card)  # Surname Search
+            res = ipedefinition_by_fulfilment_request_reference(
+                card)
     elif answer == '7' or '':
         exit
+
+    result_manager(res[0], res[1])
 
 
 def choice05():
@@ -193,13 +204,14 @@ def choice05():
         print('Default Surname = Gray - Press Enter')
         card = input('\n What is the Surname? ')
         if card == '':
-            cardholder_by_name()
+            res = cardholder_by_name()
         elif card == '7':
             exit
         else:
-            cardholder_by_name(card)  # Surname Search
+            res = cardholder_by_name(card)  # Surname Search
     elif answer == '7' or '':
         exit
+    result_manager(res[0], res[1])
 
 
 def choice06():
@@ -218,12 +230,12 @@ def choice06():
         print("Card Reference - Press 7 to Exit")
         print('Press Enter for Default = WLU009GB27499901919')
         card = input('\nWhat is the Card Reference? ')
-        card_details_by_card_reference(card)
         if card == '':
-            card_details_by_card_reference()
+            res = card_details_by_card_reference()
         elif card == '7':
             exit
         else:
-            card_details_by_card_reference(card)  # Surname Search
+            res = card_details_by_card_reference(card)
     elif answer == '7' or '':
         exit
+    result_manager(res[0], res[1])
