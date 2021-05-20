@@ -19,6 +19,7 @@ def card_details_ISRN(queried="633597024930003352"):
         print("Response OK")
     else:
         print("Response Failed")
+        print(x.status_code)
 
     return x.status_code, x.text
 
@@ -36,6 +37,7 @@ def journey_taps_ISRN(queried="633597024930003014"):
         print("Response OK")
     else:
         print("Response Failed")
+        print(x.status_code)
 
     return x.status_code, x.text
 
@@ -53,6 +55,7 @@ def journey_by_ticket_ID(queried="66698"):
         print("Response OK")
     else:
         print("Response Failed")
+        print(x.status_code)
 
     return x.status_code, x.text
 
@@ -69,6 +72,7 @@ def product_long_by_ticket_ID(queried="66697"):
         print("Response OK")
     else:
         print("Response Failed")
+        print(x.status_code)
 
     return x.status_code, x.text
 
@@ -92,6 +96,7 @@ def products_summary_list_ISAM_instance_ID(
         print("Response OK")
     else:
         print("Response Failed")
+        print(x.status_code)
 
     return x.status_code, x.text
 
@@ -111,6 +116,7 @@ def product_summary_list_by_fulfilment_request_reference(
         print("Response OK")
     else:
         print("Response Failed")
+        print(x.status_code)
 
     return x.status_code, x.text
 
@@ -128,6 +134,7 @@ def product_summary_list_by_ISRN(isrn="633597024930003733"):
         print("Response OK")
     else:
         print("Response Failed")
+        print(x.status_code)
 
     return x.status_code, x.text
 
@@ -149,6 +156,7 @@ def ipedefinition_by_ISAM_instance_ID(ipeIsamId="7B06DC7", ipeIsamSeqNum="000072
         print("Response OK")
     else:
         print("Response Failed")
+        print(x.status_code)
 
     return x.status_code, x.text
 
@@ -166,6 +174,7 @@ def ipedefinition_by_fulfilment_request_reference(queried="WLP012GW95BKR320208")
         print("Response OK")
     else:
         print("Response Failed")
+        print(x.status_code)
 
     return x.status_code, x.text
 
@@ -185,6 +194,7 @@ def cardholder_by_name(lastname="Gray"):
         print("Response OK")
     else:
         print("Response Failed")
+        print(x.status_code)
 
     return x.status_code, x.text
 
@@ -202,5 +212,6 @@ def card_details_by_card_reference(queried="WLU009GB27499901919"):
         print("Response OK")
     else:
         print("Response Failed")
+        print(x.status_code)
 
     return x.status_code, x.text
