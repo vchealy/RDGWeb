@@ -40,3 +40,5 @@ Now that is working, I switched the file name to a unique name. This was to prev
 ### Future features:    
 Loop the code for the user to attempt more requests.( Exit has already been added into the options and in the background to mitigate some errors)  
 Add in fuctionality for the user to input a list of requests rather than individually requests. This should help automate the process a little bit.
+
+![gplv3-or-later-sm](https://user-images.githubusercontent.com/9987554/118978744-93f8da00-b96f-11eb-8cdc-4dca580bb3d9.png)
