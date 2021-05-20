@@ -215,3 +215,5 @@ def card_details_by_card_reference(queried="WLU009GB27499901919"):
         print(x.status_code)
 
     return x.status_code, x.text
+
+# GPL-3.0-or-later

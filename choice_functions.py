@@ -251,3 +251,5 @@ def choice06():
     elif answer == '7' or '':
         exit
     result_manager(res[0], res[1])
+
+# GPL-3.0-or-later

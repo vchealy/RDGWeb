@@ -26,3 +26,5 @@ def result_manager(stat, inputer):
         f.write(obj2)
 
     print(stat)
+
+# GPL-3.0-or-later
