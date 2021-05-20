@@ -1,4 +1,4 @@
-# choce_functions.py
+# choice_functions.py
 '''
 Directed from main.py
 Each function is a sub selection from the initial coices in main_function

@@ -1,4 +1,4 @@
-# res.py
+# res.py 
 '''
 This module is for the management of the data retrieved from the other modules.
 
