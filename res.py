@@ -15,7 +15,7 @@ import xmltodict
 from datetime import datetime
 
 # Create an Unique  File Name
-object_name = "Extraction-" + datetime.today().strftime('%Y-%m-%d') + '_' + \
+object_name = "./extractions/Extraction-" + datetime.today().strftime('%Y-%m-%d') + '_' + \
     datetime.now().strftime("%H_%M_%S")+'.json'
 
 
