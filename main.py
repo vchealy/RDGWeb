@@ -1,4 +1,4 @@
-# main.py 
+# main.py
 '''
 This is to consume API from a specific server.
 The log in and url are contained in a separate module auth.py
@@ -18,6 +18,9 @@ from choice_functions import *
 def main_function():
     system('cls')  # Clear Console
     print('''
+    Smartcard TMS - Staging
+    Information saved in Extraction Folder
+    
     Press:
     1: If you have the ISRN
     2: If you have the Ticket Number
