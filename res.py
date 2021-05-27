@@ -13,6 +13,8 @@ Create the JSON file with a Unique Identifier
 import json
 import xmltodict
 from datetime import datetime
+import time
+from main import main_function
 
 # Create an Unique  File Name
 object_name = "./extractions/Extraction-" + datetime.today().strftime('%Y-%m-%d') + '_' + \
@@ -26,5 +28,7 @@ def result_manager(stat, inputer):
         f.write(obj2)
 
     print(stat)
+    time.sleep(5) #Pause to allow user to see the message
+    main_function()
 
 # GPL-3.0-or-later

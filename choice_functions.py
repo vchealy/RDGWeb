@@ -15,9 +15,39 @@ from request_functions import *
 from res import result_manager
 
 
+def environment():
+    '''
+    This chooses the working environment.
+    It also selects the authorisation dat from  the secure file 
+    '''
+    system('cls')  # Clear Console
+    print('''
+    Smartcard TMS - Environment Choice
+    Information saved in Extraction Folder
+
+    Press:
+    1: Live
+    2: Staging
+    7: Exit
+    ''')
+    env = input('Which Environment? ')
+    if env == '1':
+        env = 'Live'
+        # main_function(env)
+    elif env == '2':
+        env = 'Staging'
+        # main_function(env)
+    elif env == '7':
+        exit
+    else:
+        environment()
+    return env
+
+
 def choice01():
+    env= environment()
     system("cls")  # Clear Console
-    print("ISRN Choices")
+    print("ISRN Choices - {env}")
     print(
         """
     1: Card Details
@@ -34,11 +64,11 @@ def choice01():
         print('Press Enter for Default')
         card = input('\nWhat is the ISRN? ')
         if card == '':
-            res = card_details_ISRN()
+            res = card_details_ISRN(env)
         elif card == '7':
             exit
         else:
-            res = card_details_ISRN(card)
+            res = card_details_ISRN(env, card)
     elif answer == '2':
         system("cls")  # Clear Console
         print("ISRN Choices - Enter 7 to Exit")
@@ -68,8 +98,9 @@ def choice01():
 
 
 def choice02():
+    env= environment()
     system("cls")  # Clear Console
-    print("Ticket Number")
+    print("Ticket Number - {env}")
     print(
         """
     1: Journeys
@@ -84,24 +115,23 @@ def choice02():
         print("Ticket Number - Enter 7 to Exit")
         print('Press Enter for Default')
         card = input('What is the Ticket Number? ')
-        journey_by_ticket_ID(card)
         if card == '':
-            res = journey_by_ticket_ID()
+            res = journey_by_ticket_ID(env)
         elif card == '7':
             exit
         else:
-            journey_by_ticket_ID(card)
+            journey_by_ticket_ID(env, card)
     elif answer == '2':
         system("cls")  # Clear Console
         print("Ticket Number - Enter 7 to Exit")
         print('Press Enter for Default')
         card = input('What is the Ticket Number? ')
         if card == '':
-            res = product_long_by_ticket_ID()
+            res = product_long_by_ticket_ID(env)
         elif card == '7':
             exit
         else:
-            res = product_long_by_ticket_ID(card)
+            res = product_long_by_ticket_ID(env, card)
     elif answer == '7' or '':
         exit
 
@@ -109,8 +139,9 @@ def choice02():
 
 
 def choice03():
+    env= environment()
     system("cls")  # Clear Console
-    print("IPE ISAM ID and ISAM Sequence Numbers")
+    print("IPE ISAM ID and ISAM Sequence Numbers - {env}")
     print(
         """
     1: Product Summary List
@@ -127,15 +158,15 @@ def choice03():
         ipeIsamId = input('\nWhat is the IPE ISAM ID? ')
         ipeIsamSeqNum = input('What is the Sequence Number? ')
         if ipeIsamId == '' and ipeIsamSeqNum == '':
-            res = products_summary_list_ISAM_instance_ID()
+            res = products_summary_list_ISAM_instance_ID(env)
         elif ipeIsamId == '':
             ipeIsamId = "7B06DC7"
-            res = products_summary_list_ISAM_instance_ID(
+            res = products_summary_list_ISAM_instance_ID(env,
                 ipeIsamId, ipeIsamSeqNum)
         elif ipeIsamSeqNum == '':
-            res = products_summary_list_ISAM_instance_ID(ipeIsamId)
+            res = products_summary_list_ISAM_instance_ID(env, ipeIsamId)
         else:
-            res = products_summary_list_ISAM_instance_ID(
+            res = products_summary_list_ISAM_instance_ID(env,
                 ipeIsamId, ipeIsamSeqNum)
     elif answer == '2':
         system("cls")  # Clear Console
@@ -144,14 +175,14 @@ def choice03():
         ipeIsamId = input('\nWhat is the IPE ISAM ID? ')
         ipeIsamSeqNum = input('What is the Sequence Number? ')
         if ipeIsamId == '' and ipeIsamSeqNum == '':
-            ipedefinition_by_ISAM_instance_ID()
+            ipedefinition_by_ISAM_instance_ID(env,)
         elif ipeIsamId == '':
             ipeIsamId = "7B06DC7"
-            ipedefinition_by_ISAM_instance_ID(ipeIsamId, ipeIsamSeqNum)
+            ipedefinition_by_ISAM_instance_ID(env, ipeIsamId, ipeIsamSeqNum)
         elif ipeIsamSeqNum == '':
-            ipedefinition_by_ISAM_instance_ID(ipeIsamId)
+            ipedefinition_by_ISAM_instance_ID(env,ipeIsamId)
         else:
-            ipedefinition_by_ISAM_instance_ID(ipeIsamId, ipeIsamSeqNum)
+            ipedefinition_by_ISAM_instance_ID(env, ipeIsamId, ipeIsamSeqNum)
     elif answer == '7' or '':
         exit
 
@@ -159,8 +190,9 @@ def choice03():
 
 
 def choice04():
+    env= environment()
     system("cls")  # Clear Console
-    print("Fulfilment Request Reference")
+    print("Fulfilment Request Reference - {env}")
     print(
         """
     1: Product Summary List
@@ -176,22 +208,22 @@ def choice04():
         print('Press Enter for Default')
         card = input('\nWhat is the Fulfilment Request Reference? ')
         if card == '':
-            product_summary_list_by_fulfilment_request_reference()
+            product_summary_list_by_fulfilment_request_reference(env)
         elif card == '7':
             exit
         else:
-            product_summary_list_by_fulfilment_request_reference(card)
+            product_summary_list_by_fulfilment_request_reference(env, card)
     elif answer == '2':
         system("cls")  # Clear Console
         print("Fulfilment Request Reference - Press 7 to Exit")
         print('Press Enter for Default')
         card = input('\nWhat is the Fulfilment Request Reference? ')
         if card == '':
-            res = ipedefinition_by_fulfilment_request_reference()
+            res = ipedefinition_by_fulfilment_request_reference(env)
         elif card == '7':
             exit
         else:
-            res = ipedefinition_by_fulfilment_request_reference(
+            res = ipedefinition_by_fulfilment_request_reference(env,
                 card)
     elif answer == '7' or '':
         exit
@@ -200,8 +232,9 @@ def choice04():
 
 
 def choice05():
+    env= environment()
     system("cls")  # Clear Console
-    print("Passenger Surname")
+    print(f"Passenger Surname - {env}")
     print(
         """
     1: Surname
@@ -220,15 +253,16 @@ def choice05():
         elif card == '7':
             exit
         else:
-            res = cardholder_by_name(card)  # Surname Search
+            res = cardholder_by_name(env, card)  # Surname Search
     elif answer == '7' or '':
         exit
     result_manager(res[0], res[1])
 
 
 def choice06():
+    env= environment()
     system("cls")  # Clear Console
-    print("Card Reference")
+    print("Card Reference - {env}")
     print(
         """
     1: Card Details
@@ -243,11 +277,11 @@ def choice06():
         print('Press Enter for Default = WLU009GB27499901919')
         card = input('\nWhat is the Card Reference? ')
         if card == '':
-            res = card_details_by_card_reference()
+            res = card_details_by_card_reference(env)
         elif card == '7':
             exit
         else:
-            res = card_details_by_card_reference(card)
+            res = card_details_by_card_reference(env, card)
     elif answer == '7' or '':
         exit
     result_manager(res[0], res[1])

@@ -11,25 +11,26 @@ There are no other requirements of this module.
 More Error management could be included but for it's current use it is expected to suffice
 '''
 
+import sys
 from os import system
 from choice_functions import *
 
 
 def main_function():
-    system('cls')  # Clear Console
+    '''
+    This is the core functionality choice.
+    '''
+
     print('''
-    Smartcard TMS - Staging
-    Information saved in Extraction Folder
-    
-    Press:
-    1: If you have the ISRN
-    2: If you have the Ticket Number
-    3: If you have IPE ISAM ID and ISAM Sequence Numbers
-    4: If you have the fulfilment request reference
-    5: If you have the Passenger Surname
-    6: If you have the card reference
-    7: Exit
-    ''')
+        Press:
+        1: If you have the ISRN
+        2: If you have the Ticket Number
+        3: If you have IPE ISAM ID and ISAM Sequence Numbers
+        4: If you have the fulfilment request reference
+        5: If you have the Passenger Surname
+        6: If you have the card reference
+        7: Exit
+        ''')
     answer = input('What option do you want to choose? ')
 
     if answer == '1':
@@ -54,5 +55,6 @@ def main_function():
 
 if __name__ == "__main__":
     main_function()
+
 
 # GPL-3.0-or-later
