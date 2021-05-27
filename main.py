@@ -13,7 +13,7 @@ More Error management could be included but for it's current use it is expected 
 
 import sys
 from os import system
-from choice_functions import *
+from choice_functions import choice01, choice02, choice03, choice04, choice05, choice06
 
 
 def main_function():
