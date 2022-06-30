@@ -1,6 +1,6 @@
 # Replacing Postman with a simple CLI Tool
 
-The export from a colleagues Postman showed it would be very lqbour intesive to use.
+The export from a colleagues Postman showed it would be very labour intesive to use.
 I have written this small cli tool to go through the options of the various requests,selecting the correct GET request and input the value to be searched.
 
 This work in progress starts with replies sent to console, moving onto write to file, then write ujique file names.
